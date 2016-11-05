@@ -1,0 +1,11 @@
+name: USF CS Site
+author: University of San Francisco
+
+# Filter
+show_drafts: null
+future: true
+unpublished: false
+
+# Output
+permalink: date
+timezone: America/Los_Angeles

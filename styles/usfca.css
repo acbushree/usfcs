@@ -1,0 +1,122 @@
+@import url("http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,300italic,700italic");
+
+/* theme overrides */
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 13pt;
+  padding-top: 70px;
+}
+
+.jumbotron {
+  margin-top: -20px;
+}
+
+.jumbotron p {
+  color: dimgray;
+}
+
+.jumbotron p strong,
+.jumbotron p a {
+  color: #00543c;
+}
+
+.jumbotron p strong:hover,
+.jumbotron p a:hover {
+  color: #fdbb30;
+}
+
+code, pre {
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 300;
+}
+
+code {
+  color: dimgray;
+  background-color: whitesmoke;
+}
+
+strong, b, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.navbar-inverse,
+.nav-pills li.active a,
+.nav-pills li.active a:hover {
+  background-color: #00543c;
+}
+
+.nav-pills li a {
+  color: #00543c;
+}
+
+.navbar-inverse .navbar-nav li a,
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  color: #fdbb30;
+}
+
+.navbar-brand img {
+  height: 24px;
+}
+
+footer hr {
+  margin-bottom: 0.25ex;
+}
+
+footer p {
+  text-align: center;
+  font-size: small;
+}
+
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
+
+/*a.anchor {
+    color: inherit;
+}*/
+
+/* custom classes */
+
+table.table-noborder,
+.table-noborder tbody,
+.table-noborder thead,
+.table-noborder th,
+.table-noborder td {
+  border: none !important;
+}
+
+/* usf official colors */
+
+.usf-gold,
+.usf-green:hover,
+.usf-white-green:hover {
+  color: #fdbb30;
+}
+
+.usf-green {
+  color: #00543c;
+}
+
+.usf-gold-green {
+  color: #fdbb30;
+  background-color: #00543c;
+}
+
+.usf-gold-green:hover {
+  color: white;
+}
+
+.usf-white-green {
+  color: white;
+  background-color: #00543c;
+}
+
