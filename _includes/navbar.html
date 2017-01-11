@@ -14,9 +14,40 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li{% if page.title == 'Home' %} class="active"{% endif %}><a href="{{ site.github.url }}/">CS</a></li>
-        <li{% if page.title == 'People' %} class="active"{% endif %}><a href="{{ site.github.url }}/news/">People</a></li>
-      </ul>
+
+        <!-- Homepage -->
+        <li{% if page.title == 'Welcome' %} class="active"{% endif %}><a href="{{ site.github.url }}/">USFCS</a></li>
+
+        <!-- News -->
+        <li class="dropdown{% if page.url contains '/news/' %} active-child{% endif %}">
+          <a class="dropdown-toggle disabled" data-toggle="dropdown" href="{{ site.github.url }}/news">News
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li{% if page.title == 'News Feed' %} class="active"{% endif %}><a href="{{ site.github.url }}/news/news-feed">News Feed</a></li>
+            <li{% if page.title == 'Events Calendar' %} class="active"{% endif %}><a href="{{ site.github.url }}/news/events-calendar">Events Calendar</a></li>
+          </ul>
+        </li>
+
+        <!-- Undergrad -->
+        <li class="dropdown{% if page.title == 'Undergraduate' %} active{% endif %}{% if page.url contains '/undergrad/' %} active-child{% endif %}">
+          <a class="dropdown-toggle disabled" data-toggle="dropdown" href="{{ site.github.url }}/undergrad">Undergrad
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li{% if page.title == 'Undergraduate Major Requirements' %} class="active"{% endif %}><a href="{{ site.github.url }}/undergrad/major-requirements">Major Requirements</a></li>
+            <li{% if page.title == 'Undergraduate Minor Requirements' %} class="active"{% endif %}><a href="{{ site.github.url }}/undergrad/minor-requirements">Minor Requirements</a></li>
+          </ul>
+        </li>
+
+      <!-- Grad -->
+      <li class="dropdown{% if page.title == 'Graduate' %} active{% endif %}{% if page.url contains '/grad/' %} active-child{% endif %}">
+          <a class="dropdown-toggle disabled" data-toggle="dropdown" href="{{ site.github.url }}/grad">Grad
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li{% if page.title == 'Master Programs' %} class="active"{% endif %}><a href="{{ site.github.url }}/grad/master-programs">Master Programs</a></li>
+            <li{% if page.title == 'How To Apply' %} class="active"{% endif %}><a href="{{ site.github.url }}/grad/how-to-apply">How To Apply</a></li>
+            <li{% if page.title == 'Graduate Programs FAQ' %} class="active"{% endif %}><a href="{{ site.github.url }}/grad/grad-program-faq">Graduate Programs FAQ</a></li>
+          </ul>
+      </li>
 
 <!--       <ul class="nav navbar-nav navbar-right">
         <li{% if page.title == 'Courses' %} class="active"{% endif %}><a href="{{ site.github.url }}/courses/">Courses</a></li>

@@ -41,6 +41,14 @@ strong, b, h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h4>a, h5>a, h6>a {
+  color: #00543c;
+}
+
+h4>a:hover, h5>a:hover, h6>a:hover {
+  color: #fdbb30;
+}
+
 .navbar-inverse,
 .nav-pills li.active a,
 .nav-pills li.active a:hover {
@@ -57,12 +65,33 @@ strong, b, h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-.navbar-inverse .navbar-nav li a:hover {
+.navbar-inverse .navbar-nav li:not(.active-child) a:hover {
   color: #fdbb30;
 }
 
 .navbar-brand img {
   height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav>li.active-child>a, .nav>li.active-child>a:focus, .nav>li.active-child>a:hover, .nav .dropdown-menu>.active>a, .nav .dropdown-menu>.active>a:hover {
+    background-color: #080808;
+  }
+  .navbar-inverse .navbar-nav>li.active>a, .nav>li.active>a:focus, .nav>li.active>a:hover, .nav .dropdown-menu>.active>a, .nav .dropdown-menu>.active>a:hover {
+    color: #fdbb30;
+  }
+  .nav .open:not(.active)>a, .nav .open:not(.active)>a:focus, .nav .open:not(.active)>a:hover, .nav .open:not(.active)>a.dropdown-toggle, .nav .dropdown-menu, .nav .dropdown-menu>li>a:hover, .nav .dropdown-menu>li>a:active {
+    color:#fdbb30;
+    background-color: #00543c;
+  }
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+}
+
+footer {
+  clear:both;
+  padding-top: 15px;
 }
 
 footer hr {
@@ -80,10 +109,6 @@ footer p {
   }
 }
 
-/*a.anchor {
-    color: inherit;
-}*/
-
 /* custom classes */
 
 table.table-noborder,
@@ -92,6 +117,77 @@ table.table-noborder,
 .table-noborder th,
 .table-noborder td {
   border: none !important;
+}
+
+div.cal-container {
+  margin-top: 30px;
+}
+
+div.iframe-block {
+  overflow: hidden;
+  margin: 15px auto;
+  max-width: 720px;
+}
+
+div.iframe-block>iframe {
+  border: 0px none;
+  margin-left: -17px;
+  width: 105%;
+}
+
+.content-right {
+  float:right;
+  width:30%;
+}
+
+.content-left {
+  float:left;
+  width:70%;
+}
+
+#endorsements {
+  font-size: smaller;
+  border:1px solid #eee;
+  padding: 15px;
+}
+
+#endorsements:after {
+  content: "";
+  clear:both;
+}
+
+div.quote {
+  padding-top: 15px;
+}
+
+.video-center {
+  display: block;
+  width:80%;
+  height: 315px;
+  margin:15px auto;
+}
+
+.news-feed {
+  width:95%;
+  margin: 0 auto;
+  font-size: smaller;
+/*  border:1px solid #eee;
+  padding: 15px;*/
+}
+
+.news-element {
+  border-bottom: 1px solid #c7c7c7;
+  padding: 5px 10px;
+  margin-bottom: 3px;
+}
+
+.news-bottom {
+  margin-top: 15px;
+}
+
+.timestamp {
+  font-size: small;
+  font-style: italic;
 }
 
 /* usf official colors */
